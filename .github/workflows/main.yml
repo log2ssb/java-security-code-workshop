@@ -6,7 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - run: snyk auth
+      - run: snyk config set api=8a2439ed-0b34-4a45-a3d9-6ac67a2b7894
       - name: Run Snyk again to check for vulnerabilities
         uses: snyk/actions/maven@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        # env:
+        #   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
