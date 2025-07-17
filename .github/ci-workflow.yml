@@ -1,5 +1,5 @@
 name: Run all commands
-run-name: ${{github.actor}} is teting out all the actions
+# run-name: ${{github.actor}} is teting out all the actions
 on: [push]
 jobs:
   security:
